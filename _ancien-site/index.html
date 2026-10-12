@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NASOURAI PHARM — La précision qui soigne</title>
+<meta name="description" content="SARL NASOURAI PHARM, importateur et distributeur de dispositifs médicaux à Sidi Bel Abbès (Algérie). Catalogue professionnel pour pharmacies, cliniques, hôpitaux, cabinets et revendeurs. Devis sous 24 h.">
+<meta name="theme-color" content="#050E14">
+
+<script src="js/data.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Manrope:wght@400;500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/pulse.css">
+</head>
+
+<body data-page="home">
+<a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<!-- shared SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gradStroke" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2DF5C0"/><stop offset="1" stop-color="#3DB8FF"/>
+    </linearGradient>
+    <linearGradient id="gradV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2DF5C0"/><stop offset="1" stop-color="#3DB8FF"/>
+    </linearGradient>
+    <symbol id="logoMark" viewBox="0 0 44 44">
+      <rect x="1" y="1" width="42" height="42" rx="13" fill="none" stroke="url(#gradV)" stroke-width="1.6"/>
+      <path d="M8 24h7l3-8 5 15 4-11 2 4h7" fill="none" stroke="url(#gradStroke)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="36" cy="24" r="2.4" fill="#FF5C5C"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h3.5l2 5-2.5 1.5a11 11 0 0 0 6.5 6.5L16 13.5l5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  </defs>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label"></span></div></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__top">
+      <div class="preloader__logo"><svg><use href="#logoMark"/></svg><span>NASOURAI<span class="grad-text"> PHARM</span></span></div>
+      <div class="preloader__count" id="plCount">000</div>
+    </div>
+    <svg class="preloader__ecg" viewBox="0 0 560 90" preserveAspectRatio="none"><path id="plPath" d=""/></svg>
+    <div class="preloader__bottom mono"><span data-i18n="pl.cal">Calibrage du signal</span><span>SBA — DZ</span></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a href="#top" class="logo" data-scroll aria-label="NASOURAI PHARM">
+      <svg aria-hidden="true"><use href="#logoMark"/></svg>
+      <span>NASOURAI <b>PHARM</b></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale" data-i18n-aria="nav.aria">
+      <a href="#about" data-scroll data-nav="about" data-i18n="nav.about">La maison</a>
+      <a href="#catalogue" data-scroll data-nav="catalogue" data-i18n="nav.catalog">Catalogue</a>
+      <a href="#why" data-scroll data-nav="why" data-i18n="nav.why">Atouts</a>
+      <a href="#process" data-scroll data-nav="process" data-i18n="nav.process">Méthode</a>
+      <a href="#contact" data-scroll data-nav="contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang" role="group" aria-label="Langue / اللغة">
+        <button type="button" data-lang="fr" aria-pressed="true" lang="fr">FR</button>
+        <button type="button" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+      </div>
+      <a href="#contact" data-scroll class="btn btn--primary btn--sm header__quote" data-magnetic>
+        <span class="btn__fill"></span><span class="btn__in"><span data-i18n="cta.quote">Demander un devis</span><span class="badge" data-quote-count hidden>0</span></span>
+      </a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" data-i18n-aria="menu.aria" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="menu" id="menu" data-lenis-prevent aria-hidden="true">
+  <nav class="menu__links" aria-label="Menu mobile">
+    <a href="#about" data-scroll><span class="mono">01</span><span class="t" data-i18n="nav.about">La maison</span></a>
+    <a href="#catalogue" data-scroll><span class="mono">02</span><span class="t" data-i18n="nav.catalog">Catalogue</span></a>
+    <a href="#why" data-scroll><span class="mono">03</span><span class="t" data-i18n="nav.why">Atouts</span></a>
+    <a href="#process" data-scroll><span class="mono">04</span><span class="t" data-i18n="nav.process">Méthode</span></a>
+    <a href="#contact" data-scroll><span class="mono">05</span><span class="t" data-i18n="nav.contact">Contact</span></a>
+  </nav>
+  <div class="menu__foot">
+    <span class="mono" data-i18n="ph.commercial">Commercial</span>
+    <a href="tel:+213563022781">0563 02 27 81</a>
+    <a href="#contact" data-scroll class="btn btn--primary" style="justify-self:start;margin-top:12px"><span class="btn__fill"></span><span class="btn__in" data-i18n="cta.quote">Demander un devis</span></a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- 1. HERO -->
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="glow glow--a" aria-hidden="true"></div>
+  <div class="glow glow--b" aria-hidden="true"></div>
+  <svg class="hero__ecg" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+    <path class="base" id="heroEcgBase" d=""/>
+    <path class="pulse" id="heroEcgPulse" d=""/>
+  </svg>
+
+  <div class="wrap hero__inner">
+    <p class="label label--dot hero__label" data-hero-fade data-i18n="hero.label">Importateur & distributeur — dispositifs médicaux</p>
+    <h1 class="hero__title" id="heroTitle">
+      <span class="line" data-i18n-html="hero.l1">La précision</span>
+      <span class="line" data-i18n-html="hero.l2">qui <em>soigne</em>.</span>
+    </h1>
+    <div class="hero__bottom">
+      <p class="hero__sub" data-hero-fade data-i18n="hero.sub">Nous sélectionnons, importons et livrons les dispositifs médicaux dont les pharmacies, cliniques et hôpitaux algériens ont besoin : conformes, tracés, disponibles.</p>
+      <div class="hero__ctas" data-hero-fade>
+        <a href="#catalogue" data-scroll class="btn btn--primary" data-magnetic data-cursor="explore">
+          <span class="btn__fill"></span><span class="btn__in"><span data-i18n="cta.catalog">Explorer le catalogue</span><svg class="arrow"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a href="#contact" data-scroll class="btn" data-magnetic>
+          <span class="btn__fill"></span><span class="btn__in" data-i18n="cta.quote">Demander un devis</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap hero__meta mono" data-hero-fade>
+    <span class="hide-sm" data-i18n="hero.meta">Sidi Bel Abbès — Algérie</span>
+    <span class="bpm" id="bpm"><i></i><span><span id="bpmVal">072</span> BPM</span></span>
+    <span class="scroll-ind"><span data-i18n="hero.scroll">Défiler</span><span class="bar"></span></span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__row" data-dir="1"><div class="marquee__track" id="mqA" style="display:flex"></div></div>
+  <div class="marquee__row marquee__row--b" data-dir="-1"><div class="marquee__track" id="mqB" style="display:flex"></div></div>
+</div>
+
+<!-- 2. ABOUT -->
+<section class="section" id="about" aria-labelledby="aboutTitle">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label" data-reveal="up" data-i18n="about.label">01 — La maison</p>
+      <h2 class="title" id="aboutTitle" data-reveal="title" data-i18n-html="about.title">Un maillon <em>fiable</em> de la chaîne de soin.</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__aside">
+        <div class="about__sticky">
+          <div class="orb" data-parallax="-0.12" aria-hidden="true">
+            <div class="orb__core"></div>
+            <svg viewBox="0 0 300 300" id="orbSvg">
+              <circle class="orb__ring" cx="150" cy="150" r="148"/>
+              <circle class="orb__ring" cx="150" cy="150" r="118" stroke-dasharray="2 6"/>
+              <defs><path id="orbPath" d="M150,150 m-133,0 a133,133 0 1,1 266,0 a133,133 0 1,1 -266,0"/></defs>
+              <text class="orb__text"><textPath href="#orbPath">Precision · Pulse · Sidi Bel Abbès · Dispositifs médicaux · Import · Distribution ·</textPath></text>
+            </svg>
+          </div>
+          <p class="mono" style="color:var(--muted)" data-i18n="about.since">SARL — Importation & distribution</p>
+        </div>
+      </div>
+      <div>
+        <p class="reveal-words" data-reveal="words" data-i18n-html="about.text">Depuis Sidi Bel Abbès, NASOURAI PHARM relie les meilleurs fabricants internationaux aux professionnels de santé algériens.</p>
+        <div class="values" data-reveal="stagger">
+          <div class="value"><span class="mono">A</span><h3 data-i18n="v1.t">Rigueur</h3><p data-i18n="v1.d">Chaque fiche technique vérifiée, chaque certificat archivé.</p></div>
+          <div class="value"><span class="mono">B</span><h3 data-i18n="v2.t">Proximité</h3><p data-i18n="v2.d">Un interlocuteur commercial dédié, joignable en direct.</p></div>
+          <div class="value"><span class="mono">C</span><h3 data-i18n="v3.t">Réactivité</h3><p data-i18n="v3.d">Stock local et préparation des commandes sous 24 h.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. CATALOGUE -->
+<section class="section section--deep catalog" id="catalogue" aria-labelledby="catTitle">
+  <div class="glow glow--c" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label" data-reveal="up" data-i18n="cat.label">02 — Catalogue</p>
+      <h2 class="title" id="catTitle" data-reveal="title" data-i18n-html="cat.title">Le catalogue, <em>en un geste</em>.</h2>
+      <p class="lead" data-reveal="up" data-i18n="cat.lead">Filtrez par famille, ouvrez la fiche, ajoutez à votre demande. Tarifs professionnels communiqués sous 24 h.</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filtrer par catégorie" data-i18n-aria="cat.filterAria">
+      <span class="filters__ind" aria-hidden="true"></span>
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <div class="catalog__foot" data-reveal="up">
+      <p data-i18n="cat.foot">Une référence manque ? Nous la sourçons pour vous.</p>
+      <div class="catalog__foot-ctas">
+        <a href="produits.html" class="btn btn--primary" data-magnetic data-cursor="explore"><span class="btn__fill"></span><span class="btn__in"><span data-see-all>Voir les références</span><svg class="arrow"><use href="#i-arrow"/></svg></span></a>
+        <a href="#contact" data-scroll class="btn" data-magnetic><span class="btn__fill"></span><span class="btn__in"><span data-i18n="cat.footCta">Envoyer ma liste</span></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. WHY -->
+<section class="section" id="why" aria-labelledby="whyTitle">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label" data-reveal="up" data-i18n="why.label">03 — Pourquoi nous</p>
+      <h2 class="title" id="whyTitle" data-reveal="title" data-i18n-html="why.title">Cinq raisons de nous <em>confier</em> vos achats.</h2>
+    </div>
+    <div class="why__grid" id="whyGrid" data-reveal="stagger">
+      <article class="spot">
+        <div class="spot__top"><div class="spot__icon"><svg viewBox="0 0 32 32"><path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7z"/><path d="M11 16l4 4 7-8"/></svg></div><span class="spot__num">01</span></div>
+        <svg class="spot__pulse" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60h150l12-30 16 70 14-90 12 50h196"/></svg>
+        <h3 data-i18n="w1.t">Qualité certifiée</h3><p data-i18n="w1.d">Fabricants audités, marquage CE et normes ISO vérifiés pour chaque référence avant sa mise en stock.</p><span class="spot__stat mono" data-i18n="w1.s">100 % des lots tracés</span>
+      </article>
+      <article class="spot">
+        <div class="spot__top"><div class="spot__icon"><svg viewBox="0 0 32 32"><path d="M8 3h11l6 6v20H8z"/><path d="M19 3v6h6M12 17h9M12 22h6"/></svg></div><span class="spot__num">02</span></div>
+        <h3 data-i18n="w2.t">Conformité réglementaire</h3><p data-i18n="w2.d">Dossiers d'enregistrement, certificats d'origine et fiches techniques fournis sur simple demande.</p><span class="spot__stat mono" data-i18n="w2.s">Documents sous 24 h</span>
+      </article>
+      <article class="spot">
+        <div class="spot__top"><div class="spot__icon"><svg viewBox="0 0 32 32"><path d="M4 11l12-6 12 6v12l-12 6-12-6z"/><path d="M4 11l12 6 12-6M16 17v12"/></svg></div><span class="spot__num">03</span></div>
+        <h3 data-i18n="w3.t">Stock permanent</h3><p data-i18n="w3.d">Un entrepôt à Sidi Bel Abbès pour éviter les ruptures sur vos références critiques.</p><span class="spot__stat mono" data-i18n="w3.s">+1 200 références</span>
+      </article>
+      <article class="spot">
+        <div class="spot__top"><div class="spot__icon"><svg viewBox="0 0 32 32"><path d="M2 8h17v14H2zM19 13h6l5 5v4H19z"/><circle cx="8" cy="24" r="3"/><circle cx="24" cy="24" r="3"/></svg></div><span class="spot__num">04</span></div>
+        <h3 data-i18n="w4.t">Livraison maîtrisée</h3><p data-i18n="w4.d">Préparation sous 24 h et acheminement suivi vers tout l'Ouest algérien, et au-delà.</p><span class="spot__stat mono" data-i18n="w4.s">48 à 72 h</span>
+      </article>
+      <article class="spot">
+        <div class="spot__top"><div class="spot__icon"><svg viewBox="0 0 32 32"><path d="M6 18v-3a10 10 0 0 1 20 0v3"/><rect x="4" y="17" width="5" height="8" rx="2"/><rect x="23" y="17" width="5" height="8" rx="2"/><path d="M26 25c0 3-4 4-8 4"/></svg></div><span class="spot__num">05</span></div>
+        <h3 data-i18n="w5.t">Accompagnement</h3><p data-i18n="w5.d">Un commercial dédié pour vos volumes, vos appels d'offres et vos besoins spécifiques.</p><span class="spot__stat mono" data-i18n="w5.s">1 interlocuteur unique</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. STATS -->
+<section class="section stats" id="stats" aria-labelledby="statsTitle">
+  <svg class="stats__ecg" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path id="statsEcg" d=""/></svg>
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label" data-reveal="up" data-i18n="stats.label">04 — En chiffres</p>
+      <h2 class="title" id="statsTitle" data-reveal="title" data-i18n-html="stats.title">Des chiffres qui <em>battent</em> juste.</h2>
+    </div>
+    <div class="stats__row" id="statsRow"></div>
+  </div>
+</section>
+
+<!-- 6. PROCESS (paper) -->
+<section class="section process" id="process" aria-labelledby="procTitle">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label" data-reveal="up" data-i18n="proc.label">05 — Méthode</p>
+      <h2 class="title" id="procTitle" data-reveal="title" data-i18n-html="proc.title">De la demande <em>au suivi</em>.</h2>
+      <p class="lead" data-reveal="up" data-i18n="proc.lead">Un circuit court et lisible, pensé pour les acheteurs qui n'ont pas de temps à perdre.</p>
+    </div>
+    <div class="process__track" id="procTrack">
+      <svg class="process__svg" viewBox="0 0 1000 140" preserveAspectRatio="none" aria-hidden="true">
+        <path class="base" id="procBase" d=""/><path class="draw" id="procDraw" d=""/>
+      </svg>
+      <span class="process__vline" aria-hidden="true"><i></i></span>
+      <ol class="steps" style="margin:0;list-style:none">
+        <li class="step"><span class="step__dot"></span><span class="step__num">01</span><h3 data-i18n="s1.t">Demande</h3><p data-i18n="s1.d">Envoyez votre liste par formulaire, WhatsApp ou téléphone.</p></li>
+        <li class="step"><span class="step__dot"></span><span class="step__num">02</span><h3 data-i18n="s2.t">Devis</h3><p data-i18n="s2.d">Offre chiffrée et disponibilités confirmées sous 24 h.</p></li>
+        <li class="step"><span class="step__dot"></span><span class="step__num">03</span><h3 data-i18n="s3.t">Livraison</h3><p data-i18n="s3.d">Préparation, contrôle et livraison suivie jusqu'à votre établissement.</p></li>
+        <li class="step"><span class="step__dot"></span><span class="step__num">04</span><h3 data-i18n="s4.t">Suivi</h3><p data-i18n="s4.d">Réassort, traçabilité des lots et service après-vente.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CONTACT -->
+<section class="section section--deep" id="contact" aria-labelledby="contactTitle">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label" data-reveal="up" data-i18n="contact.label">06 — Contact</p>
+      <h2 class="title" id="contactTitle" data-reveal="title" data-i18n-html="contact.title">Parlons de votre <em>prochaine</em> commande.</h2>
+    </div>
+    <div class="contact__grid">
+      <div data-reveal="stagger">
+        <p class="lead" data-i18n="contact.lead">Une question, un appel d'offres, une rupture à combler ? Notre équipe répond directement.</p>
+        <div class="phones">
+          <a class="phone" href="tel:+21340708057" data-cursor="call"><span><span class="mono" data-i18n="ph.standard">Standard</span><strong>040 70 80 57</strong></span><svg><use href="#i-phone"/></svg></a>
+          <a class="phone" href="tel:+213563022780" data-cursor="call"><span><span class="mono" data-i18n="ph.contact">Contact</span><strong>0563 02 27 80</strong></span><svg><use href="#i-phone"/></svg></a>
+          <a class="phone" href="tel:+213563022781" data-cursor="call"><span><span class="mono" data-i18n="ph.commercial">Commercial</span><strong>0563 02 27 81</strong></span><svg><use href="#i-phone"/></svg></a>
+        </div>
+        <address class="address" style="font-style:normal">
+          <span class="mono" style="color:var(--muted)" data-i18n="contact.addrL">Adresse</span>
+          <p data-i18n="contact.addr">72, logement route Tessala, Sidi Bel Abbès, Algérie</p>
+        </address>
+        <div class="map">
+          <svg viewBox="0 0 600 375" role="img" aria-label="Plan stylisé : route Tessala, Sidi Bel Abbès" data-i18n-aria="contact.mapAria">
+            <defs>
+              <pattern id="mapGrid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0v24" fill="none" stroke="#0E2A35" stroke-width="1"/></pattern>
+              <radialGradient id="mapGlow"><stop offset="0" stop-color="#2DF5C0" stop-opacity=".25"/><stop offset="1" stop-color="#2DF5C0" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="600" height="375" fill="url(#mapGrid)"/>
+            <path d="M-20 300C120 270 200 330 330 300S520 230 640 250" fill="none" stroke="#0D3A4A" stroke-width="22" opacity=".5"/>
+            <path class="map__road" stroke-width="10" d="M-10 90L620 140"/>
+            <path class="map__road" stroke-width="6" d="M120 -10L170 390M420 -10L380 390M-10 220L620 200"/>
+            <path class="map__road" stroke-width="3" d="M60 -10L90 390M250 -10L270 390M520 -10L500 390M-10 40L620 60M-10 330L620 320"/>
+            <path class="map__main" d="M-10 360L150 280L300 195L470 120L620 70"/>
+            <circle cx="300" cy="195" r="90" fill="url(#mapGlow)"/>
+            <circle class="map__pin-ring" cx="300" cy="195" r="12" stroke-width="1.5"/>
+            <circle class="map__pin-ring" cx="300" cy="195" r="12" stroke-width="1.5"/>
+            <circle cx="300" cy="195" r="7" fill="#2DF5C0"/>
+            <circle cx="300" cy="195" r="3" fill="#050E14"/>
+            <text class="map__txt" x="318" y="186">NASOURAI PHARM</text>
+            <text class="map__txt" x="470" y="104" transform="rotate(-24 470 104)">ROUTE TESSALA</text>
+            <text class="map__txt" x="24" y="30">SIDI BEL ABBÈS · 35.19°N 0.63°W</text>
+            <g transform="translate(560 40)" fill="none" stroke="#8FA9B3"><circle r="14"/><path d="M0-10L4 4 0 1-4 4z" fill="#FF5C5C" stroke="none"/></g>
+          </svg>
+          <a class="btn btn--sm btn--primary map__cta" target="_blank" rel="noopener" id="mapLink" href="#" data-magnetic><span class="btn__fill"></span><span class="btn__in"><span data-i18n="contact.map">Ouvrir l'itinéraire</span><svg class="arrow"><use href="#i-arrow"/></svg></span></a>
+        </div>
+      </div>
+
+      <form class="form" id="quoteForm" novalidate data-reveal="up">
+        <h3 data-i18n="form.title">Demande de devis</h3>
+        <p class="form__note" data-i18n="form.note">Votre demande est transmise sur WhatsApp à notre service commercial. Réponse sous 24 h ouvrées.</p>
+        <div class="fields">
+          <div class="field"><input id="f-name" name="name" placeholder=" " autocomplete="name" required><label for="f-name" data-i18n="form.name">Nom et prénom</label><span class="field__err" aria-live="polite"></span></div>
+          <div class="field"><input id="f-org" name="org" placeholder=" " autocomplete="organization"><label for="f-org" data-i18n="form.org">Établissement</label></div>
+          <div class="field"><select id="f-type" name="type">
+              <option value="pharmacie" data-i18n="form.t1">Pharmacie</option>
+              <option value="clinique" data-i18n="form.t2">Clinique</option>
+              <option value="hopital" data-i18n="form.t3">Hôpital</option>
+              <option value="cabinet" data-i18n="form.t4">Cabinet médical</option>
+              <option value="revendeur" data-i18n="form.t5">Revendeur</option>
+            </select><label for="f-type" data-i18n="form.type">Type d'établissement</label></div>
+          <div class="field"><input id="f-phone" name="phone" type="tel" inputmode="tel" placeholder=" " autocomplete="tel" required><label for="f-phone" data-i18n="form.phone">Téléphone</label><span class="field__err" aria-live="polite"></span></div>
+          <div class="field field--full"><input id="f-city" name="city" placeholder=" " autocomplete="address-level2"><label for="f-city" data-i18n="form.city">Wilaya / ville</label></div>
+          <div class="field field--full"><span class="mono" style="color:var(--muted);display:block;margin-bottom:10px" data-i18n="form.selected">Produits sélectionnés</span><div class="quote-chips" id="quoteChips" data-empty="—"></div></div>
+          <div class="field field--full"><textarea id="f-msg" name="msg" placeholder=" "></textarea><label for="f-msg" data-i18n="form.msg">Produits, quantités, précisions</label></div>
+        </div>
+        <button type="submit" class="btn btn--primary form__submit" data-magnetic data-cursor="send"><span class="btn__fill"></span><span class="btn__in"><span data-i18n="form.submit">Envoyer la demande</span><svg class="arrow"><use href="#i-arrow"/></svg></span></button>
+        <div class="form__success" id="formSuccess" role="status">
+          <svg viewBox="0 0 90 90"><circle cx="45" cy="45" r="40"/><path d="M27 46l12 12 24-26"/></svg>
+          <h3 data-i18n="form.okT">Demande prête.</h3>
+          <p class="form__note" data-i18n="form.ok">WhatsApp s'ouvre avec votre message pré-rempli : il ne reste qu'à l'envoyer.</p>
+          <button type="button" class="btn btn--sm" id="formReset"><span class="btn__fill"></span><span class="btn__in" data-i18n="form.again">Nouvelle demande</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="glow glow--f" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="footer__cols">
+      <div>
+        <p class="footer__tag" data-i18n-html="foot.tag">La précision <span class="grad-text">qui soigne.</span></p>
+      </div>
+      <div><h4 class="mono" data-i18n="foot.nav">Navigation</h4><ul>
+        <li><a href="#about" data-scroll data-i18n="nav.about">La maison</a></li>
+        <li><a href="#catalogue" data-scroll data-i18n="nav.catalog">Catalogue</a></li>
+        <li><a href="#why" data-scroll data-i18n="nav.why">Atouts</a></li>
+        <li><a href="#process" data-scroll data-i18n="nav.process">Méthode</a></li>
+      </ul></div>
+      <div><h4 class="mono" data-i18n="foot.cats">Catégories</h4><ul id="footCats"></ul></div>
+      <div><h4 class="mono" data-i18n="foot.contact">Contact</h4><ul>
+        <li><a href="tel:+21340708057" style="direction:ltr;unicode-bidi:isolate">040 70 80 57</a></li>
+        <li><a href="tel:+213563022780" style="direction:ltr;unicode-bidi:isolate">0563 02 27 80</a></li>
+        <li><a href="tel:+213563022781" style="direction:ltr;unicode-bidi:isolate">0563 02 27 81</a></li>
+        <li style="color:var(--muted)" data-i18n="contact.addr">72, logement route Tessala, Sidi Bel Abbès, Algérie</li>
+      </ul></div>
+    </div>
+  </div>
+  <p class="footer__giant" aria-label="NASOURAI PHARM"><span class="row" data-split-chars>NASOURAI</span><span class="row" data-split-chars>PHARM</span></p>
+  <div class="wrap footer__bar mono">
+    <span>© <span id="year">2026</span> SARL NASOURAI PHARM — <span data-i18n="foot.rights">Tous droits réservés</span></span>
+    <span data-i18n="foot.legal">Dispositifs médicaux destinés aux professionnels de santé. Lire attentivement la notice.</span>
+    <a href="#top" data-scroll data-i18n="foot.top">Retour en haut ↑</a>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<div class="fab">
+  <a class="fab__call" href="tel:+213563022781" data-i18n-aria="fab.call" aria-label="Appeler le service commercial"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg></a>
+  <a class="fab__wa" id="waFab" href="https://wa.me/213563022781" target="_blank" rel="noopener" data-i18n-aria="fab.wa" aria-label="Écrire sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
+  </a>
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal" id="modal" data-lenis-prevent role="dialog" aria-modal="true" aria-labelledby="mName" aria-hidden="true">
+  <div class="modal__bg" data-close></div>
+  <div class="modal__panel" id="modalPanel">
+    <button class="modal__close" data-close type="button" data-i18n-aria="modal.close" aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <div class="modal__media" id="mMedia"></div>
+    <div class="modal__body">
+      <span class="label" id="mCat"></span>
+      <h3 class="modal__name" id="mName"></h3>
+      <span class="mono" id="mRef" style="color:var(--mint)"></span>
+      <p id="mDesc" style="color:#BFD0D6"></p>
+      <span class="mono" style="color:var(--muted)" data-i18n="modal.specs">Caractéristiques</span>
+      <ul class="modal__specs" id="mSpecs"></ul>
+      <p><span class="mono" style="color:var(--muted)" data-i18n="modal.pack">Conditionnement</span> — <span id="mPack"></span></p>
+      <div class="modal__actions">
+        <button type="button" class="btn btn--primary" id="mQuote" data-magnetic><span class="btn__fill"></span><span class="btn__in"><span id="mQuoteTxt">Demander un devis</span><svg class="arrow"><use href="#i-arrow"/></svg></span></button>
+        <a class="btn" id="mFiche" href="produits.html" data-magnetic><span class="btn__fill"></span><span class="btn__in" data-i18n="modal.fiche">Fiche complète</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><i></i><span id="toastTxt"></span></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="js/pulse.js"></script>
+</body>
+</html>

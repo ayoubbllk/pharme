@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NASOURAI PHARM | Importateur et distributeur de dispositifs médicaux</title>
+<meta name="description" content="SARL NASOURAI PHARM, importateur et distributeur de dispositifs médicaux à Sidi Bel Abbès. Diagnostic, monitorage, bloc opératoire, laboratoire, mobilier médical et consommables. Fiches techniques à télécharger.">
+<link rel="icon" href="assets/img/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script>try{if(sessionStorage.getItem("np-seen")!=="1"&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("pl-on")}catch(e){}</script>
+</head>
+<body data-page="home">
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__top">
+      <div class="preloader__logo">
+        <img src="assets/img/brand/logo-mark.png" alt="" width="100" height="56">
+        <span class="brand__text"><span class="brand__name">NASOURAI</span><span class="brand__sub">PHARM</span></span>
+      </div>
+      <div class="preloader__count" id="plCount">000</div>
+    </div>
+    <svg class="preloader__ecg" viewBox="0 0 560 90" preserveAspectRatio="none">
+      <defs><linearGradient id="plGrad" x1="0" x2="1"><stop offset="0" stop-color="#07558C"/><stop offset="1" stop-color="#00A6A6"/></linearGradient></defs>
+      <path id="plPath" d=""/>
+    </svg>
+    <div class="preloader__bar"><span id="plBar"></span></div>
+    <div class="preloader__bottom"><span>Dispositifs médicaux</span><span>Sidi Bel Abbès — DZ</span></div>
+  </div>
+</div>
+<div id="site-header"></div>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__text">
+        <span class="eyebrow">Importateur et distributeur de dispositifs médicaux</span>
+        <h1>Le matériel médical fiable pour votre établissement</h1>
+        <p class="lead">Depuis Sidi Bel Abbès, NASOURAI PHARM équipe les pharmacies, cliniques, hôpitaux et laboratoires : du stéthoscope au moniteur de surveillance, en passant par le bloc opératoire.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="produits.html">Voir nos produits <i data-ico="arrow"></i></a>
+          <a class="btn btn--ghost" href="contact.html">Demander un devis</a>
+        </div>
+        <ul class="hero__trust">
+          <li><i data-ico="check"></i>Fiches techniques disponibles</li>
+          <li><i data-ico="check"></i>Conseil commercial dédié</li>
+          <li><i data-ico="check"></i>Devis rapide</li>
+        </ul>
+      </div>
+      <div class="hero__visual">
+        <a class="hero__tile hero__tile--big" href="produit.html#moniteur-7-parametres">
+          <img src="assets/img/produits/moniteur-7-parametres.jpg" alt="Moniteur de surveillance 7 paramètres" width="600" height="600">
+          <span>Moniteur de surveillance</span>
+        </a>
+        <a class="hero__tile" href="produit.html#lit-reanimation-electrique">
+          <img src="assets/img/produits/lit-reanimation-electrique.jpg" alt="Lit de réanimation électrique" width="400" height="300">
+          <span>Lit de réanimation</span>
+        </a>
+        <a class="hero__tile" href="produit.html#tensiometre-aneroide">
+          <img src="assets/img/produits/tensiometre-aneroide.jpg" alt="Tensiomètre anéroïde" width="400" height="300">
+          <span>Tensiomètre</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagements -->
+  <section class="perks" aria-label="Nos engagements">
+    <div class="container">
+      <div class="perk"><div class="perk__icon"><i data-ico="shield"></i></div><div><strong>Produits contrôlés</strong><span>Des marques reconnues : StarCare, Omron, Jenway.</span></div></div>
+      <div class="perk"><div class="perk__icon"><i data-ico="file"></i></div><div><strong>Fiches techniques</strong><span>Chaque produit a sa fiche PDF à télécharger.</span></div></div>
+      <div class="perk"><div class="perk__icon"><i data-ico="truck"></i></div><div><strong>Livraison</strong><span>Préparation et livraison jusqu'à votre établissement.</span></div></div>
+      <div class="perk"><div class="perk__icon"><i data-ico="headset"></i></div><div><strong>Interlocuteur dédié</strong><span>Un commercial joignable directement par téléphone.</span></div></div>
+    </div>
+  </section>
+
+  <!-- Catégories -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Nos gammes</span>
+          <h2>Explorez nos catégories</h2>
+        </div>
+        <p>Huit familles de produits pour couvrir les besoins du cabinet, de la pharmacie, du laboratoire et de l'hôpital.</p>
+      </div>
+      <div class="cat-grid" id="home-cats"></div>
+    </div>
+  </section>
+
+  <!-- Bloc opératoire en avant -->
+  <section class="section section--soft">
+    <div class="container split">
+      <div class="split__media reveal">
+        <img src="assets/img/produits/table-operatoire-mt600.jpg" alt="Table d'opération chirurgicale MT600" loading="lazy" width="900" height="900">
+        <div class="split__chips">
+          <a class="chip-float" href="produit.html#bistouri-zeus-400p"><img src="assets/img/produits/bistouri-zeus-400p.jpg" alt="">Bistouri ZEUS-400P</a>
+          <a class="chip-float" href="produit.html#pousse-seringue-2-voies"><img src="assets/img/produits/pousse-seringue-2-voies.jpg" alt="">Pousse-seringue 2 voies</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Bloc opératoire et réanimation</span>
+        <h2>Équipez vos salles d'opération et de réanimation</h2>
+        <p class="muted">Tables d'opération, bistouris électriques, pousse-seringues, réchauffeurs de sang et aspirateurs de mucosité : des équipements fiables pour les équipes chirurgicales.</p>
+        <div class="mini-links" id="home-bloc-links"></div>
+        <a class="btn btn--primary" href="produits.html#bloc">Voir la gamme bloc opératoire <i data-ico="arrow"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produits phares -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Sélection</span>
+          <h2>Produits phares</h2>
+        </div>
+        <a class="link-arrow" href="produits.html">Voir les <span id="home-count"></span> produits <i data-ico="arrow"></i></a>
+      </div>
+      <div class="prod-grid" id="home-featured"></div>
+    </div>
+  </section>
+
+  <!-- Fiches techniques -->
+  <section class="section section--sky" style="padding:48px 0">
+    <div class="container">
+      <div class="doc-band reveal">
+        <div class="doc-band__icon"><i data-ico="download"></i></div>
+        <div>
+          <h2>Toutes nos fiches techniques à télécharger</h2>
+          <p>Dimensions, caractéristiques, normes : téléchargez la fiche PDF de chaque produit depuis sa page ou depuis le catalogue.</p>
+        </div>
+        <a class="btn btn--teal" href="produits.html">Accéder au catalogue</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consommables -->
+  <section class="section">
+    <div class="container split">
+      <div class="reveal">
+        <span class="eyebrow">Consommables et instrumentation</span>
+        <h2>Le quotidien des soins, toujours disponible</h2>
+        <p class="muted">Lames de bistouri, kits de péridurale, aiguilles épicrâniennes, gaines de stérilisation, gel d'échographie, pansements et instruments en inox 18/10.</p>
+        <div class="mini-links" id="home-cons-links"></div>
+        <a class="btn btn--primary" href="produits.html#consommables">Voir les consommables <i data-ico="arrow"></i></a>
+      </div>
+      <div class="split__media reveal">
+        <img src="assets/img/produits/plateaux-inox.jpg" alt="Plateaux en acier inoxydable" loading="lazy" width="900" height="900">
+        <div class="split__chips">
+          <a class="chip-float" href="produit.html#gel-echographie-5l"><img src="assets/img/produits/gel-echographie-5l.jpg" alt="">Gel d'échographie 5 L</a>
+          <a class="chip-float" href="produit.html#aiguille-epicranienne"><img src="assets/img/produits/aiguille-epicranienne.jpg" alt="">Aiguille épicrânienne</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secteurs -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Pour qui ?</span>
+          <h2>Nous accompagnons tous les professionnels de santé</h2>
+        </div>
+      </div>
+      <div class="sectors">
+        <div class="sector reveal"><div class="sector__icon"><i data-ico="pharmacy"></i></div><strong>Pharmacies</strong></div>
+        <div class="sector reveal"><div class="sector__icon"><i data-ico="hospital"></i></div><strong>Hôpitaux</strong></div>
+        <div class="sector reveal"><div class="sector__icon"><i data-ico="clinic"></i></div><strong>Cliniques</strong></div>
+        <div class="sector reveal"><div class="sector__icon"><i data-ico="stetho"></i></div><strong>Cabinets médicaux</strong></div>
+        <div class="sector reveal"><div class="sector__icon"><i data-ico="flask"></i></div><strong>Laboratoires</strong></div>
+        <div class="sector reveal"><div class="sector__icon"><i data-ico="store"></i></div><strong>Revendeurs</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Méthode -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Comment commander</span>
+          <h2>De votre demande à la livraison</h2>
+        </div>
+        <a class="link-arrow" href="a-propos.html">En savoir plus sur nous <i data-ico="arrow"></i></a>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="step__num">1</div><h3>Choisissez</h3><p>Parcourez le catalogue et téléchargez les fiches techniques.</p></div>
+        <div class="step reveal"><div class="step__num">2</div><h3>Demandez un devis</h3><p>Par formulaire, WhatsApp ou téléphone.</p></div>
+        <div class="step reveal"><div class="step__num">3</div><h3>Validez</h3><p>Nous confirmons les prix et les disponibilités.</p></div>
+        <div class="step reveal"><div class="step__num">4</div><h3>Recevez</h3><p>Préparation, contrôle et livraison de votre commande.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>Un projet d'équipement ou un appel d'offres ?</h2>
+          <p>Envoyez-nous votre liste : notre service commercial vous répond avec un devis détaillé.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--white" href="contact.html">Demander un devis</a>
+          <a class="btn btn--ghost-w" href="tel:+213563022781"><i data-ico="phone"></i>0563 02 27 81</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact et devis | NASOURAI PHARM</title>
+<meta name="description" content="Contactez NASOURAI PHARM à Sidi Bel Abbès : standard 040 70 80 57, commercial 0563 02 27 81. Demande de devis par formulaire ou WhatsApp.">
+<link rel="icon" href="assets/img/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script>try{if(sessionStorage.getItem("np-seen")!=="1"&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("pl-on")}catch(e){}</script>
+</head>
+<body data-page="contact">
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__top">
+      <div class="preloader__logo">
+        <img src="assets/img/brand/logo-mark.png" alt="" width="100" height="56">
+        <span class="brand__text"><span class="brand__name">NASOURAI</span><span class="brand__sub">PHARM</span></span>
+      </div>
+      <div class="preloader__count" id="plCount">000</div>
+    </div>
+    <svg class="preloader__ecg" viewBox="0 0 560 90" preserveAspectRatio="none">
+      <defs><linearGradient id="plGrad" x1="0" x2="1"><stop offset="0" stop-color="#07558C"/><stop offset="1" stop-color="#00A6A6"/></linearGradient></defs>
+      <path id="plPath" d=""/>
+    </svg>
+    <div class="preloader__bar"><span id="plBar"></span></div>
+    <div class="preloader__bottom"><span>Dispositifs médicaux</span><span>Sidi Bel Abbès — DZ</span></div>
+  </div>
+</div>
+<div id="site-header"></div>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <ol class="crumbs"><li><a href="index.html">Accueil</a></li><li aria-current="page">Contact</li></ol>
+      <h1>Contact et demande de devis</h1>
+      <p>Une question, un devis, un appel d'offres ? Notre équipe vous répond directement.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div>
+        <div class="phone-cards">
+          <a class="phone-card" href="tel:+213563022781"><div class="phone-card__icon"><i data-ico="phone"></i></div><div><small>Service commercial</small><strong>0563 02 27 81</strong></div></a>
+          <a class="phone-card" href="tel:+213563022780"><div class="phone-card__icon"><i data-ico="phone"></i></div><div><small>Contact</small><strong>0563 02 27 80</strong></div></a>
+          <a class="phone-card" href="tel:+21340708057"><div class="phone-card__icon"><i data-ico="phone"></i></div><div><small>Standard</small><strong>040 70 80 57</strong></div></a>
+          <a class="phone-card phone-card--wa" href="https://wa.me/213563022781" target="_blank" rel="noopener"><div class="phone-card__icon"><i data-ico="whatsapp"></i></div><div><small>WhatsApp</small><strong>Écrire au commercial</strong></div></a>
+        </div>
+        <div class="side-card" style="margin-top:14px">
+          <h3>Adresse</h3>
+          <p class="muted" style="margin:0 0 10px">72 Logements, route de Tessala<br>Sidi Bel Abbès, Algérie</p>
+          <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Route+Tessala+Sidi+Bel+Abbes+Algerie" target="_blank" rel="noopener">Ouvrir l'itinéraire <i data-ico="arrow"></i></a>
+        </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps?q=Route+Tessala,+Sidi+Bel+Abbes,+Algerie&amp;output=embed" title="Carte : NASOURAI PHARM, Sidi Bel Abbès" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <form class="form" id="quote-form">
+        <h2>Demande de devis</h2>
+        <p class="muted" style="font-size:.92rem">Votre demande est envoyée sur WhatsApp à notre service commercial.</p>
+        <div class="form__grid">
+          <div class="field"><label for="f-nom">Nom et prénom *</label><input id="f-nom" required autocomplete="name"></div>
+          <div class="field"><label for="f-tel">Téléphone *</label><input id="f-tel" type="tel" required autocomplete="tel"></div>
+          <div class="field"><label for="f-type">Type d'établissement</label>
+            <select id="f-type"><option>Pharmacie</option><option>Clinique</option><option>Hôpital</option><option>Cabinet médical</option><option>Laboratoire</option><option>Revendeur</option><option>Autre</option></select>
+          </div>
+          <div class="field"><label for="f-etab">Nom de l'établissement</label><input id="f-etab" autocomplete="organization"></div>
+          <div class="field field--full"><label for="f-ville">Ville / wilaya</label><input id="f-ville" autocomplete="address-level2"></div>
+          <div class="field field--full"><label for="f-produit">Produit concerné</label><select id="f-produit"></select></div>
+          <div class="field field--full"><label for="f-msg">Votre message</label><textarea id="f-msg" placeholder="Quantités, références, précisions…"></textarea></div>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit" style="margin-top:18px"><i data-ico="whatsapp"></i>Envoyer ma demande</button>
+        <p class="form__note">* Champs obligatoires. WhatsApp s'ouvre avec votre message prérempli : il vous reste à l'envoyer.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

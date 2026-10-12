@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nos produits | NASOURAI PHARM</title>
+<meta name="description" content="Catalogue NASOURAI PHARM : diagnostic médical, monitorage, bloc opératoire, laboratoire, mobilier médical, pansements, instrumentation et consommables. Fiches techniques PDF à télécharger.">
+<link rel="icon" href="assets/img/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script>try{if(sessionStorage.getItem("np-seen")!=="1"&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("pl-on")}catch(e){}</script>
+</head>
+<body data-page="catalog">
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__top">
+      <div class="preloader__logo">
+        <img src="assets/img/brand/logo-mark.png" alt="" width="100" height="56">
+        <span class="brand__text"><span class="brand__name">NASOURAI</span><span class="brand__sub">PHARM</span></span>
+      </div>
+      <div class="preloader__count" id="plCount">000</div>
+    </div>
+    <svg class="preloader__ecg" viewBox="0 0 560 90" preserveAspectRatio="none">
+      <defs><linearGradient id="plGrad" x1="0" x2="1"><stop offset="0" stop-color="#07558C"/><stop offset="1" stop-color="#00A6A6"/></linearGradient></defs>
+      <path id="plPath" d=""/>
+    </svg>
+    <div class="preloader__bar"><span id="plBar"></span></div>
+    <div class="preloader__bottom"><span>Dispositifs médicaux</span><span>Sidi Bel Abbès — DZ</span></div>
+  </div>
+</div>
+<div id="site-header"></div>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <ol class="crumbs"><li><a href="index.html">Accueil</a></li><li><a href="produits.html">Produits</a></li><li id="crumb-cat" aria-current="page">Tous les produits</li></ol>
+      <h1 id="page-title">Nos produits</h1>
+      <p>Cliquez sur un produit pour voir ses caractéristiques, ses photos et télécharger sa fiche technique.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:36px">
+    <div class="container catalog">
+      <aside class="filters" id="filters" aria-label="Filtrer par catégorie"></aside>
+      <div>
+        <div class="chips" id="chips" aria-label="Filtrer par catégorie"></div>
+        <div class="toolbar">
+          <label class="search">
+            <span class="sr-only">Rechercher un produit</span>
+            <i data-ico="search"></i>
+            <input id="q" type="search" placeholder="Rechercher un produit…" autocomplete="off">
+          </label>
+          <span class="result-count" id="count" aria-live="polite"></span>
+        </div>
+        <div class="cat-intro" id="cat-intro" hidden></div>
+        <div class="prod-grid" id="grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>Vous ne trouvez pas un produit ?</h2>
+          <p>Notre catalogue évolue. Dites-nous ce que vous cherchez, nous le sourçons pour vous.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--white" href="contact.html">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
